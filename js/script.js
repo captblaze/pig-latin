@@ -1,22 +1,3 @@
-
-function translatePigLatin(str) {
-    let vowels = ['a', 'e', 'i', 'o', 'u'];
-    let newStr = "";
-
-    if (vowels.indexOf(str[0]) > -1) {
-        newStr = str + "acedu";
-        return newStr;
-    } else {
-        let firstMatch = str.match(/[aeiou]/g) || 0;
-        let vowel = str.indexOf(firstMatch[0]);
-        newStr = str.substring(vowel) + str.substring(0, vowel) + "ayac";
-        return newStr;
-    }
-} 
-
-
-
-
 //user logic
 $(document).ready(function(){
     $("#pigLatin").submit(function(event){
@@ -40,13 +21,13 @@ $(document).ready(function(){
     let newStr = "";
     if (vowels.indexOf(userInput[0]) > -1) {
         newStr = userInput + "acedu";
-        console.log(newStr);
+        $("#output").text(newStr);
     }
     else if (twoLetter==="qu") {
-        console.log(remove2 + "ayac");
+        $("#output").text(remove2 + "ayac");
             
     }else {
-      console.log(remove + "ayac");
+        $("#output").text(remove + "ayac");
     }
 
    
