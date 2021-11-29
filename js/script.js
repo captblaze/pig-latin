@@ -1,30 +1,54 @@
-$(document).ready(function() {
-    $("#pigLatin").submit(function(event){
-        
-function pigLatin(str) {
-  // Convert string to lowercase
-  str = str.toLowerCase()
-  // Initialize array of vowels
-  const vowels = ["a", "e", "i", "o", "u"];
-  // Initialize vowel index to 0
-  let vowelIndex = 0;
 
-  if (vowels.includes(str[0])) {
-    // If first letter is a vowel
-    return str + "acedu";
-  } else {
-    // If the first letter isn't a vowel i.e is a consonant
-    for (let char of str) {
-      // Loop through until the first vowel is found
-      if (vowels.includes(char)) {
-        // Store the index at which the first vowel exists
-        vowelIndex = str.indexOf(char);
-        break;
-      }
+function translatePigLatin(str) {
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    let newStr = "";
+
+    if (vowels.indexOf(str[0]) > -1) {
+        newStr = str + "acedu";
+        return newStr;
+    } else {
+        let firstMatch = str.match(/[aeiou]/g) || 0;
+        let vowel = str.indexOf(firstMatch[0]);
+        newStr = str.substring(vowel) + str.substring(0, vowel) + "ayac";
+        return newStr;
     }
-    // Compose final string
-    return str.slice(vowelIndex) + str.slice(0, vowelIndex) + "ayac";
+} 
+
+
+
+
+//user logic
+$(document).ready(function(){
+    $("#pigLatin").submit(function(event){
+        event.preventDefault();
+
+        //user input value
+    let userInput =$("#word").val();
+    userInput= userInput.toLowerCase()
+
+// first character, removing of the firstletter and concating them
+    let firstLetter= userInput.substring(0,1)
+    let remove  = userInput.slice(1)+firstLetter;
+
+// first two  character, removing of the first two letter and concating them
+    let twoLetter = userInput.substring(0,2)
+    let remove2  = userInput.slice(2)+twoLetter;
+    
+
+
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    let newStr = "";
+    if (vowels.indexOf(userInput[0]) > -1) {
+        newStr = userInput + "acedu";
+        console.log(newStr);
     }
-    event.preventDefault();
-}
-})
+    else if (twoLetter==="qu") {
+        console.log(remove2 + "ayac");
+            
+    }else {
+      console.log(remove + "ayac");
+    }
+
+   
+});
+});
