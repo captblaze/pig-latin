@@ -12,14 +12,41 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html"> <img src="pics/Pig-latin-new.jpg" alt="pics for header"></a>
-        <h1>PIG LATIN</h1>
-      </div>  
+        <a href="index.html"> <img src="pics/Pig-latin-new.jpg"     alt="pics for header"></a>
+            <h1>PIG LATIN</h1>
+    </div> <br>
 
-      <div class="container-fluid">
-        
+      <div class="container"><br><br>
+        <div class="jumbotron">
     
-        <p> please type a word</p>
+            <h4>Rules of the game</h4>
+
+                <h5><strong> Description:</strong> Pig Latin is a web app that rearranges the user input in a manner designed by the developer.<br> 
+                "It will add 'acedu' to the end of words that begin with a vowel.<br>
+                It will take the first alphabeth of any word that starts with a consonant and swith it to the end of the word and concat(add) the result with the string <span style="font-style: italic;"> "ayac"</span>
+
+            <h5> Third rule, the app takes the user word and takes the first two letter if the word has the alphabeth<span style="font-style: italic;"> "qu" </span> starting the word and concat (add) the result with <span style="font-style: italic;">"ayac"</span> and displays the result.</h5><br>
+        </div>
+    <div class="jumbotron">
+    <h4>Examples</h4>
+          <div>
+              <h5><strong> Example:</strong> if user types away the app would siple add acedu to the userword;</h5>
+              <strong> Expected Output:</strong>  <span style="font-style: italic;">"awayacedu"</span><br><br>
+          </div>
+
+          <div>
+              <h5>Example 2: if the user types "typical" the app would take the first alphabeth as its a consonant and move it to the end of the word and add <span style="font-style: italic;">"ayac"</span> to the result.</h5>
+              <strong> Expected Output:</strong> <span style="font-style: italic;">"ypicaltayac"</span><br><br>
+          </div>
+
+          <div>
+              <h5>Example 3: user types a word like quack, app takes the first two alphabeth as it contains <span style="font-style: italic;">"q"</span> and<span style="font-style: italic;"> "u"</span> as the first two alphabeths and wove the to the end of the word and add ayac to the result.
+              </h5>
+          </div>
+
+      </div>
+    
+    <p> please type a word</p>
     
         <form id="pigLatin">
             <label for="word"><strong>Type any word</strong></label> <br>
@@ -28,12 +55,28 @@
             <button type="submit">check</button><br><br>
             </form>
           
-            <div id="output">
-              <div class="container">
+    <div id="output">
+        
+        <div class="container">
 
+        </div>
+    </div><br><br><br>
+
+    <footer style="text-align: center;">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12">
+                <footer >
+                  <img src="pics/Pig-latin-new.jpg" alt="Stanley's Pig latin logo" style="width: 10%;height: 10%; margin-left: 2%; border-radius: 20px;">
+                  <p>Copyright © 2021, STANLEY'S Pig Latin App. All Rights Reserved.</p>
+                </footer>
               </div>
-            </div>
-
+              </div>
+          </div>
+      </div>
+  </footer>
+  
+    
 
     
 </body>

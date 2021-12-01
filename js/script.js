@@ -25,6 +25,10 @@ $(document).ready(function(){
     }
     else if (twoLetter==="qu") {
         $("#output").text(remove2 + "ayac");
+    }
+
+    else if (userInput==="") {
+            $("#output").text(`Please type a word`);
             
     }else {
         $("#output").text(remove + "ayac");
