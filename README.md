@@ -1,7 +1,9 @@
 # APP NAME #
 ## PIG LATIN ##
+
 # NAME OF DEVELOPER #
 ## MGBANWUNE ONYEKACHI STANLEY  ##
+
 # BRIEF DESCRIPTION OF APP #
 ## Describe: pigLatin is a web app that rearranges the user input in a manner designed by the developer. 
 ### Test: "It will add 'acedu' to the end of words that begin with a vowel."
@@ -14,7 +16,7 @@
 ### Example 2: if the user types "typical" the app would take the first alphabeth as its a consonant and move it to the end of the word and add "ayac" to the result.
 ### Expected Output: "ypicaltayac"
 
-### Example 3: user types a word like quack, app takes the first two alphabeth as it contains "q" and "u" as the first two alphabeths and wove the to the end of the word and add ayac to the result.
+### Example 3: user types a word like quack, app takes the first two alphabeth as it contains "q" and "u" as the first two alphabeths and move them to the end of the word and add ayac to the result.
 
 ## TECHNOLOGY USED 
 * HTML
